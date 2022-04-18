@@ -10,7 +10,7 @@ CREATE TABLE mytable(
   ,Latitude              NUMERIC(8,5) NOT NULL
   ,Longitude             NUMERIC(9,5) NOT NULL
   ,Région_Administrative INTEGER  NOT NULL
-  ,No_Permis               VARCHAR(5)
+  ,No_Permis             VARCHAR(5)
   ,Brasse_sous_le_permis VARCHAR(5)
   ,Type_de_Permis        VARCHAR(29) NOT NULL
   ,Membre_de_AMBQ        BIT  NOT NULL
