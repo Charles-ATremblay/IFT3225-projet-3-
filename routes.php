@@ -9,7 +9,7 @@ require_once("{$_SERVER['DOCUMENT_ROOT']}/router.php");
 
 get('/', 'index.php');
 get('/names', 'rest-api/brasseries/readNames.php');
-get('/names/$Nom_raison_sociale', 'rest-api/brasseries/readOneName.php');
+get('/names/$Nom_raison_sociale', 'rest-api/brasseries/readNamePrefix.php');
 get('/permis/$No_Permis', 'rest-api/brasseries/readOneNoPermis.php');
 // post('/add', 'rest-api/brasseries/add.php');
 
