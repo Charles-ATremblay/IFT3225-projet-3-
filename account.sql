@@ -1,7 +1,7 @@
 --
--- Table structure for table `accounts`
+-- Table structure for table `account`
 --
-CREATE TABLE `accounts` (
+CREATE TABLE `account` (
   `account_id` int(10) UNSIGNED NOT NULL,
   `account_name` varchar(255) NOT NULL,
   `account_passwd` varchar(255) NOT NULL,
@@ -9,16 +9,16 @@ CREATE TABLE `accounts` (
   `account_enabled` tinyint(1) UNSIGNED NOT NULL DEFAULT '1'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 --
--- Indexes for table `accounts`
+-- Indexes for table `account`
 --
-ALTER TABLE `accounts`
+ALTER TABLE `account`
   ADD PRIMARY KEY (`account_id`),
   ADD UNIQUE KEY `account_name` (`account_name`);
 --
--- AUTO_INCREMENT for table `accounts`
+-- AUTO_INCREMENT for table `account`
 --
-ALTER TABLE `accounts`
+ALTER TABLE `account`
   MODIFY `account_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
-INSERT INTO accounts(account_name,account_passwd) VALUES ('ift3225','sésame');
-INSERT INTO accounts(account_name,account_passwd) VALUES ('admin','ouvre-toi');
+INSERT INTO account(account_name,account_passwd) VALUES ('ift3225','sésame');
+INSERT INTO account(account_name,account_passwd) VALUES ('admin','ouvre-toi');
