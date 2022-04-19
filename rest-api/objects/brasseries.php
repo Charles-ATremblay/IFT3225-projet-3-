@@ -60,7 +60,7 @@ class Brasseries{
     }
 
       // read one brasserie with Nom_raison_sociale PREFIX
-      function readOneName(){
+      function readNamePrefix(){
 
         // select all query
         $query = "SELECT

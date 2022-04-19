@@ -22,7 +22,7 @@ $brasserie = new Brasseries($db);
 $brasserie->Nom_raison_sociale = $Nom_raison_sociale;
 
 // query products
-$stmt = $brasserie->readOneName();
+$stmt = $brasserie->readNamePrefix();
 $num = $stmt->rowCount();
  
 // check if more than 0 record found
