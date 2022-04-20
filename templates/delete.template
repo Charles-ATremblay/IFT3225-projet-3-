@@ -1,0 +1,11 @@
+<form>
+  <div class="form-outline">
+  <input type="text" id="form1" class="form-control" />
+  <label class="form-label" for="form1">Enter #Permis to delete</label>
+  </div>
+  
+  <!-- Submit button -->
+  <button type="button" class="btn btn-primary btn-block mb-4">Delete</button>
+
+</form>
+<script src="js/delete.js"></script>

@@ -1,0 +1,18 @@
+<form id="loginform" method="post">
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="text" id="username" class="form-control" />
+    <label class="form-label" for="username">Username</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="password" class="form-control" />
+    <label class="form-label" for="password">Password</label>
+  </div>
+
+  <!-- Submit button -->
+  <button type="button" class="btn btn-primary btn-block mb-4">Sign in</button>
+
+</form>
+<script src="js/login.js"></script>

@@ -1,0 +1,37 @@
+<form>
+  <div class="form-outline">
+  <input type="text" id="nom" class="form-control" />
+  <label class="form-label" for="form1">Nom</label>
+  </div>
+
+  <div class="form-outline">
+  <input type="text" id="adress" class="form-control" />
+  <label class="form-label" for="form1">Adress</label>
+  </div>
+
+  <div class="form-outline">
+  <input type="text" id="ville" class="form-control" />
+  <label class="form-label" for="form1">Ville</label>
+  </div>
+
+  <div class="form-outline">
+  <input type="text" id="cp" class="form-control" />
+  <label class="form-label" for="form1">CP</label>
+  </div>
+
+  <div class="form-outline">
+  <input type="text" id="permis" class="form-control" />
+  <label class="form-label" for="form1">#Permis</label>
+  </div>
+
+  <div class="form-outline">
+  <input type="text" id="courriel" class="form-control" />
+  <label class="form-label" for="form1">Courriel</label>
+  </div>
+
+  
+  <!-- Submit button -->
+  <button type="button" class="btn btn-primary btn-block mb-4">Add</button>
+
+</form>
+<script src="js/add.js"></script>
