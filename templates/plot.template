@@ -1,4 +1,4 @@
-<h1> The Plot... </h1>
+<h1> Plot </h1>
+<div class="plot"></div>
 <script src="https://d3js.org/d3.v5.min.js"></script>
 <script src="js/plot.js"></script>
-<div class="plot"></div>

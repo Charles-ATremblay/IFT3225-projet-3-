@@ -7,7 +7,8 @@ $(document).ready(function() {
         dataType: 'json'
     }).done(function(data) {
         console.log(data);
-        console.log(data[11]);
+        console.log(data['data'][0]);
+        data = data["data"]
         const width = 800,
             height = 640,
             margin = {

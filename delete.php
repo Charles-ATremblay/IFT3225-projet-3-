@@ -15,8 +15,8 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // include_once '../objects/brasseries.php';
 
 
-include_once 'config/database.php';
-include_once 'objects/brasseries.php';
+include_once 'api/config/database.php';
+include_once 'api/objects/brasseries.php';
 
  
 // get database connection
