@@ -41,7 +41,7 @@ if($num>0){
         extract($row);
  
         $brasserie_item=array(
-            "Nom" => $$Nom_raison_sociale,
+            "Nom" => $Nom_raison_sociale,
             "Latitude" => $Latitude,
             "Longitude" => $Longitude
         );
@@ -51,7 +51,7 @@ if($num>0){
  
     echo json_encode($brasseries_arr,JSON_PRETTY_PRINT);
 }
- 
+
 else{
     echo json_encode(
         array("message" => "No brasseries found.")

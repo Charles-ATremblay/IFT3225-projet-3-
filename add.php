@@ -17,25 +17,34 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 // // instantiate brasseries object
 // include_once '../objects/brasseries.php';
  
-include_once 'config/database.php';
+include_once 'api/config/database.php';
  
 // instantiate brasseries object
-include_once 'objects/brasseries.php';
+include_once 'api/objects/brasseries.php';
 
 $database = new Database();
 $db = $database->getConnection();
  
 $brasseries = new Brasseries($db);
- 
+
+
+// $nom = mysqli_real_escape_string($db, $_POST['nom']);
+// $adresse = mysqli_real_escape_string($db, $_POST['adresse']);
+// $ville = mysqli_real_escape_string($db, $_POST['ville']);
+// $code_postal = mysqli_real_escape_string($db, $_POST['code_postal']);
+// $permis = mysqli_real_escape_string($db, $_POST['permis']);
+// $courriel = mysqli_real_escape_string($db, $_POST['courriel']);
+
 // get posted data
-$data = json_decode(file_get_contents("Php://input"));
+// $data = json_decode(file_get_contents("Php://input"));
  
 // set brasserie property values
-$brasseries->Nom_raison_sociale = $data->name;
-$brasseries->Adresse = $data->address;
-$brasseries->Ville = $data->ville;
-$brasseries->Code_Postal = $data->code_postal;
-$brasseries->Courriel = $data->courriel;
+$brasseries->Nom_raison_sociale = $_POST['nom'];
+$brasseries->Adresse = $_POST['adresse'];
+$brasseries->Ville = $_POST['ville'];
+$brasseries->Code_Postal = $_POST['code_postal'];
+$brasseries->No_Permis = $_POST['permis'];
+$brasseries->Courriel = $_POST['courriel'];
 
  
 // add the brasserie

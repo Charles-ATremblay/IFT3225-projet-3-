@@ -31,7 +31,7 @@
 
   
   <!-- Submit button -->
-  <button type="button" class="btn btn-primary btn-block mb-4">Add</button>
+  <input type="button" id="submit" class="btn btn-primary btn-block mb-4" value="Add"/>
 
 </form>
 <script src="js/add.js"></script>

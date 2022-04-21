@@ -5,7 +5,7 @@
   </div>
   
   <!-- Submit button -->
-  <button type="button" class="btn btn-primary btn-block mb-4">Delete</button>
+  <submit type="button" id="submit" class="btn btn-primary btn-block mb-4" value="Delete/>
 
 </form>
 <script src="js/delete.js"></script>

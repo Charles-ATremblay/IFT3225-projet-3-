@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 	});
 
-	app.run("#/table");
+	app.run("#/plot");
 	
 
 })

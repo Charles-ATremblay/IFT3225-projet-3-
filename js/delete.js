@@ -7,6 +7,5 @@ $('.myButton').click(function() {
      alert( "Hello! " + resp );
    });    
    
-   });
-   
-   
+});
+  
