@@ -44,8 +44,8 @@ $(document).ready(function() {
 
         // x and y scales
         const xScale = d3.scaleLinear() 
-            .domain([xMin - 1, xMax + 1])
-            .range([innerWidth, 0]);
+            .domain([xMax + 1, xMin - 1])
+            .range([0, innerWidth]);
         const yScale = d3.scaleLinear()
             .domain([yMin, yMax])
             .range([innerHeight, 0]);

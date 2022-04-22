@@ -7,6 +7,11 @@ header("Content-Type: application/json; charset=UTF-8");
 include_once 'api/config/database.php';
 include_once 'api/objects/brasseries.php';
 
+// Check if user is logged in
+// if(!isset($_SESSION['username'])){
+//     header('Location: login.php');
+// }
+
 // instantiate database and brasserie object
 $database = new Database();
 $db = $database->getConnection();

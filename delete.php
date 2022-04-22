@@ -11,7 +11,11 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
 include_once 'api/config/database.php';
 include_once 'api/objects/brasseries.php';
 
- 
+//Checks if user is logged in and if he is an admin
+// if(!isset($_SESSION['username']) && $_SESSION['username'] != "admin"){
+//     header('Location: login.php');
+// }
+
 // get database connection
 $database = new Database();
 $db = $database->getConnection();
@@ -23,19 +27,19 @@ $brasseries = new Brasseries($db);
 $data = json_decode(file_get_contents("php://input"));
  
 // set brasserie No_Permis to be deleted
-$brasseries->No_Permis = $data->No_Permis;
+$brasseries->No_Permis = $_POST['permis'];
+$permis = $_POST['permis'];
  
-// delete the brasserie
-if($brasseries->delete()){
+
+$sql_query = "DELETE FROM brasseries WHERE No_Permis='".$permis."'";
+
+if($db->query($sql_query)){
     echo '{';
         echo '"message": "brasseries was deleted."';
-    echo '}';
-}
- 
-// if unable to delete the brasserie
-else{
-    echo '{';
-        echo '"message": "Unable to delete object."';
-    echo '}';
-}
+     echo '}';
+    }else{
+        echo '{';
+            echo '"message": "Unable to delete object."';
+        echo '}';
+    }
 ?>

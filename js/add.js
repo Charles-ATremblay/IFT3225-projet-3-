@@ -1,13 +1,3 @@
-// $('.myButton').click(function() {
-
-//   $.ajax({
-//       type: "POST",
-//       url: "phpFileWithFunction.php"
-//   }).done(function(resp) {
-//       alert("Hello! " + resp);
-//   });
-
-// });
 $("svg").empty();
 $(document).ready(function() {
 
@@ -21,9 +11,8 @@ $(document).ready(function() {
         var longitude = $("#longitude").val();
         var latitude = $("#latitude").val();
 
-        // NOT SECURE TO FIX IF TIME ALLOWS IT
         if (name == "" || adress == "" || ville == "" || cp == "" || permis == "" || courriel == "") {
-            alert("SVP remplir tous les champs requis.");
+            alert("Please fill out all the form.");
             return false;
         }
 
@@ -43,7 +32,6 @@ $(document).ready(function() {
             cache: false,
             success: function(data) {
               console.log(data);
-              //alert(data);
 
             },
             error: function(xhr, status, error) {

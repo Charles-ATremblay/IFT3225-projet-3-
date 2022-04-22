@@ -12,6 +12,11 @@ include_once 'api/config/database.php';
 // instantiate brasseries object
 include_once 'api/objects/brasseries.php';
 
+//Checks if user is logged in and if he is an admin
+// if(!isset($_SESSION['username']) && $_SESSION['username'] != admin){
+//     header('Location: login.php');
+// }
+
 $database = new Database();
 $db = $database->getConnection();
  

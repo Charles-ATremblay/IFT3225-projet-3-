@@ -2,11 +2,11 @@
 <form>
   <div class="form-outline">
   <label class="form-label" for="form1">Enter the permit number of the microbrewery you want to delete</label>
-  <input type="text" id="form1" class="form-control" />
+  <input type="text" id="permis" class="form-control" />
   </div>
   <br>
   <!-- Submit button -->
-  <submit type="button" id="submit" class="btn btn-primary btn-block mb-4" value="Delete/>
+  <input type="button" id="submit" class="btn btn-primary btn-block mb-4" value="Delete"/>
 
 </form>
 <script src="js/delete.js"></script>
