@@ -61,5 +61,5 @@ $brasserie_arr = array(
 );
  
 // make it json format
-print_r(json_encode($brasserie_arr));
+print_r(json_encode($brasserie_arr,JSON_PRETTY_PRINT));    
 ?>

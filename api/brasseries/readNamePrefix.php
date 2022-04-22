@@ -45,7 +45,7 @@ if($num>0){
         array_push($brasseries_arr["data"], $brasserie_item);
     }
  
-    echo json_encode($brasseries_arr);
+    echo json_encode($brasseries_arr,JSON_PRETTY_PRINT);
 }
  
 else{
