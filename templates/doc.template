@@ -1,1 +1,70 @@
-<h1> Doc </h1>
+      <h1> API Documentation </h1>
+      Welcome to the documentation for Project 3. You can use this API to get information on various MicroBrewery.
+      <br>
+      Use the API for good. Don't overdo it
+      <br>
+      <br>
+      <br>
+
+      <h3>Names</h3>
+      <hr>
+      <h5>/api/names</h5>
+      <h4>Overview</h3>
+      <p>Retrieve a list of names.</p> 
+      <h4>Response</h3>   
+      <div id="namesDoc"></div>
+      <br>
+
+      <h3>Names Prefix</h3>
+      <hr>
+      <h5>/api/names/&lt;prefix&gt;</h5>
+      <h4>Overview</h3>
+      <p>Retrieve a list of names by entering a prefix.</p> 
+      <h4>Response</h3>   
+      <h6>(Using "les" as prefix)</h6>
+      <div id="namePrefixDoc"></div>
+      <br>
+ 
+      <h3>Permis</h3>
+      <hr>
+      <h5>/api/permis/&lt;permis&gt;</h5>
+      <h4>Overview</h3>
+      <p>Retrieve information about a Microbrewery by entering his Permit Number.</p> 
+      <h4>Response</h3>   
+      <h6>(Using "ab013" as permis)</h6>
+      <div id="permisDoc"></div>
+      <br>
+
+      <h3>Add</h3>
+      <hr>
+      <h5>/api/add</h5>
+      <h4>Overview</h3>
+      <p>Adds a Microbrewery, preferably by using curl.</p> 
+      <h4>Parameters</h3>   
+      <p>The parameter is in JSON.</p>
+      <p>Exemple 1:</p>
+      <p>curl -X POST -H "Content-Type: application/json" -d '
+        {
+          "Nom_raison_sociale": "TestForPost",
+          "Adresse": "1219, RUE CRESCENT",
+          "Ville": "MONTRÉAL",
+          "Code_Postal": "H3G 2B1",
+          "Latitude": "45.49672",
+          "Longitude": "-73.57444",
+          "No_Permis": "AB013",
+          "Courriel": "info@brutopia.net",
+        }
+        ' localhost/api/add
+        </p>
+      <p>Exemple 2:</p>
+      <p>curl -X POST -H "Content-Type: application/json" -d '{"Nom_raison_sociale":"TestForPost","Appellation_l\u00e9gale":"9023-7918 QU\u00c9BEC INC.","Autre_appellation":null,"Adresse":"1219, RUE CRESCENT","Ville":"MONTR\u00c9AL","Code_Postal":"H3G 2B1","Province":"Qu\u00e9bec","Pays":"Canada","Latitude":"45.49672","Longitude":"-73.57444","R\u00e9gion_Administrative":6,"No_Permis":"AB013","Brasse_sous_le_permis":null,"Type_de_Permis":"Producteur artisanal de bi\u00e8re","Membre_de_AMBQ":0,"Ann\u00e9e_fondation":"1997","Site_Web":"http:\/\/www.brutopia.net\/","Courriel":"info@brutopia.net","T\u00e9l\u00e9phone":"514-393-9277","Facebook":"https:\/\/www.facebook.com\/Brutopia-Brew-Pub-30270360433\/","Ratebeer":"http:\/\/www.ratebeer.com\/brewers\/brutopia\/914\/","Untappd":"https:\/\/untappd.com\/Brutopiabrewpub","AuMenu":"X","Twitter":"https:\/\/twitter.com\/Brutopia","Wikidata":"?","Youtube":"?","Instagram":"https:\/\/www.instagram.com\/brutopia_brew_pub\/","Pinterest":"?","Snapchat":"?","Autre":null,"Notes":null}' localhost/api/add </p>
+      <h4>Response</h3>   
+      <h6>(For Example 2)</h6>
+      <div id="addDoc"></div>
+      <br>
+
+      <script type="text/javascript" src="js/apidocs/renderjson.js"></script>
+      <script src="js/apidocs/namesDoc.js"></script>
+      <script src="js/apidocs/namePrefixDoc.js"></script>
+      <script src="js/apidocs/permisDoc.js"></script>
+      <script src="js/apidocs/addDoc.js"></script>

@@ -40,7 +40,7 @@ $(document).ready(function(){
 
 	});
 
-	app.run("#/delete");
+	app.run("#/login");
 	
 
 })
