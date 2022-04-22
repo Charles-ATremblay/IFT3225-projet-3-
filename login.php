@@ -4,7 +4,7 @@
 	session_start();
 	getConnection();
 
-	if(isset($_POST["logInSubmit"])){
+	if(isset($_POST["submit"])){
 		$username = $_POST["username"];
 		$password = $_POST["password"];
 

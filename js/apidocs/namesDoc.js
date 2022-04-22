@@ -1,12 +1,6 @@
 var example = {
     "data": [
         {
-            "Nom_raison_sociale": ""
-        },
-        {
-            "Nom_raison_sociale": "a"
-        },
-        {
             "Nom_raison_sociale": "\u00c0 L'ABORDAGE MICROBRASSERIE"
         },
         {
@@ -521,9 +515,6 @@ var example = {
         },
         {
             "Nom_raison_sociale": "SIBOIRE JACQUES-CARTIER"
-        },
-        {
-            "Nom_raison_sociale": "TestForPost"
         },
         {
             "Nom_raison_sociale": "T\u00caTE D'ALLUMETTE MICROBRASSERIE"

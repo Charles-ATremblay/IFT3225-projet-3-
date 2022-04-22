@@ -1,7 +1,8 @@
 $(document).ready(function() {
-    $('#loginform').submit(function(e) {
-        e.preventDefault();
+    $('#submit').click(function() {
+        
         alert('There was some error performing the AJAX call!');
+        
         $.ajax({
             type: "POST",
             url: 'login.php',
@@ -14,7 +15,7 @@ $(document).ready(function() {
                 // let's redirect
                 if (jsonData.success == "1")
                 {
-                    location.href = 'my_profile.php';
+                    location.href = 'table.php';
                 }
                 else
                 {
