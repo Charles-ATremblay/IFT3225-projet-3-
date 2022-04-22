@@ -6,11 +6,9 @@ $(document).ready(function() {
         method: "GET",
         dataType: 'json'
     }).done(function(data) {
-        console.log(data);
-        console.log(data['data'][0]);
         data = data["data"]
-        const width = 800,
-            height = 640,
+        const width = 640,
+            height = 400,
             margin = {
                 top: 50,
                 right: 50,
@@ -25,20 +23,34 @@ $(document).ready(function() {
             .attr("height", height)
             .append("g")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        
+        // x and y minimum and maximum values
+        const xMin = d3.min(data, function(d){
+            return d.Longitude;
+        });
+        const xMax = d3.max(data, function(d) {
+            return d.Longitude;
+        });
+        const yMin = d3.min(data, function(d){
+            return d.Latitude;
+        });
+        const yMax = d3.max(data, function(d) {
+            return d.Latitude;
+        });
+        console.log("y Min = "+ yMin);
+        console.log("y Max = "+yMax);
+        console.log("x Min = "+xMin);
+        console.log("x Max = "+xMax);
 
-        const xScale = d3.scaleLinear() //x
-            .domain([d3.min(data, function(d) {
-                return d.Longitude;
-            }) - 1, d3.max(data, function(d) {
-                return d.Longitude;
-            }) + 1])
-            .range([0, innerWidth]);
-        const yScale = d3.scaleLinear() //y
-            .domain([0, d3.max(data, function(d) {
-                return d.Latitude;
-            })])
+        // x and y scales
+        const xScale = d3.scaleLinear() 
+            .domain([xMin - 1, xMax + 1])
+            .range([innerWidth, 0]);
+        const yScale = d3.scaleLinear()
+            .domain([yMin, yMax])
             .range([innerHeight, 0]);
 
+        // Defining Axises and grid lines
         const xAxis = d3.axisBottom(xScale).ticks(10);
         const yAxis = d3.axisLeft(yScale).ticks(10);
         const xAxisGrid = d3.axisBottom(xScale).tickSize(-innerHeight).tickFormat("").ticks(10);

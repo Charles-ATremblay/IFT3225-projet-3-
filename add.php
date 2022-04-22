@@ -25,8 +25,9 @@ $brasseries->Ville = $_POST['ville'];
 $brasseries->Code_Postal = $_POST['code_postal'];
 $brasseries->No_Permis = $_POST['permis'];
 $brasseries->Courriel = $_POST['courriel'];
+$brasseries->Longitude = $_POST['longitude'];
+$brasseries->Latitude = $_POST['latitude'];
 
- 
 // add the brasserie
 if($brasseries->add()){
     echo '{';

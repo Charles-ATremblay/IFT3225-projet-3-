@@ -1,36 +1,46 @@
-<h1> Delete </h1>
+<h1> Add a Microbrewery to the Database </h1>
 <form>
   <div class="form-outline">
+  <label class="form-label" for="form1">Name</label>
   <input type="text" id="nom" class="form-control" />
-  <label class="form-label" for="form1">Nom</label>
   </div>
 
   <div class="form-outline">
+  <label class="form-label" for="form1">Address</label>
   <input type="text" id="adress" class="form-control" />
-  <label class="form-label" for="form1">Adress</label>
   </div>
 
   <div class="form-outline">
+  <label class="form-label" for="form1">City</label>
   <input type="text" id="ville" class="form-control" />
-  <label class="form-label" for="form1">Ville</label>
   </div>
 
   <div class="form-outline">
+  <label class="form-label" for="form1">Postal Code</label>
   <input type="text" id="cp" class="form-control" />
-  <label class="form-label" for="form1">CP</label>
   </div>
 
   <div class="form-outline">
+  <label class="form-label" for="form1">Permit Number</label>
   <input type="text" id="permis" class="form-control" />
-  <label class="form-label" for="form1">#Permis</label>
   </div>
 
   <div class="form-outline">
+  <label class="form-label" for="form1">E-mail</label>
   <input type="text" id="courriel" class="form-control" />
-  <label class="form-label" for="form1">Courriel</label>
   </div>
 
-  
+  <div class="form-outline">
+  <label class="form-label" for="form1">Longitude</label>
+  <input type="text" id="longitude" class="form-control" />
+  </div>
+
+  <div class="form-outline">
+  <label class="form-label" for="form1">Latitude</label>
+  <input type="text" id="latitude" class="form-control" />
+  </div>
+
+  <br>
   <!-- Submit button -->
   <input type="button" id="submit" class="btn btn-primary btn-block mb-4" value="Add"/>
 

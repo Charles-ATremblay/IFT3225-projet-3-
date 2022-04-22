@@ -18,7 +18,8 @@ $(document).ready(function() {
         var cp = $("#cp").val();
         var permis = $("#permis").val();
         var courriel = $("#courriel").val();
-        //Ajouter longitude et latitude for the plot
+        var longitude = $("#longitude").val();
+        var latitude = $("#latitude").val();
 
         // NOT SECURE TO FIX IF TIME ALLOWS IT
         if (name == "" || adress == "" || ville == "" || cp == "" || permis == "" || courriel == "") {
@@ -35,7 +36,9 @@ $(document).ready(function() {
                 "ville": ville,
                 "code_postal": cp,
                 "permis": permis,
-                "courriel": courriel
+                "courriel": courriel,
+                "longitude": longitude,
+                "latitude": latitude
             },
             cache: false,
             success: function(data) {

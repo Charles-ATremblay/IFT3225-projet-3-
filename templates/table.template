@@ -1,13 +1,13 @@
-<h1> Table </h1>
+<h1> Table of All Microbreweries in the Database</h1>
 <table id="table_id">
         <thead>
             <tr>
-                <th>Nom</th>
-                <th>Adress</th>
-                <th>Ville</th>
-                <th>CP</th>
-                <th>#Permis</th>
-                <th>Courriel</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>Postal Code</th>
+                <th>Permit Number</th>
+                <th>E-mail</th>
             </tr>
         </thead>
 </table>

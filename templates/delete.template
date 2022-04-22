@@ -1,10 +1,10 @@
-<h1> Delete </h1>
+<h1> Delete a Microbrewery from the Database </h1>
 <form>
   <div class="form-outline">
+  <label class="form-label" for="form1">Enter the permit number of the microbrewery you want to delete</label>
   <input type="text" id="form1" class="form-control" />
-  <label class="form-label" for="form1">Enter #Permis to delete</label>
   </div>
-  
+  <br>
   <!-- Submit button -->
   <submit type="button" id="submit" class="btn btn-primary btn-block mb-4" value="Delete/>
 
