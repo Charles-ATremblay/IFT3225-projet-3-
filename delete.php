@@ -8,13 +8,6 @@ header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers
  
  
 // include database and object file
-// include_once 'rest-api/config/database.php';
-// include_once 'rest-api/objects/brasseries.php';
-
-// include_once '../config/database.php';
-// include_once '../objects/brasseries.php';
-
-
 include_once 'api/config/database.php';
 include_once 'api/objects/brasseries.php';
 

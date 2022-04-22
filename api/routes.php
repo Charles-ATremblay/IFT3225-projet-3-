@@ -10,7 +10,7 @@ require_once("{$_SERVER['DOCUMENT_ROOT']}/api/router.php");
 get('/api/names', 'api/brasseries/readNames.php');
 get('/api/names/$Nom_raison_sociale', 'api/brasseries/readNamePrefix.php');
 get('/api/permis/$No_Permis', 'api/brasseries/readOneNoPermis.php');
-post('/api/add/$name/$address/$ville/$code_postal/$courriel', 'api/brasseries/add.php');
+post('/api/add', 'api/brasseries/add.php');
 
 // ##################################################
 // ##################################################

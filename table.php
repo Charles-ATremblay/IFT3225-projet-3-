@@ -4,12 +4,6 @@ header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
  
 // include database and object files
-// include_once 'rest-api/config/database.php';
-// include_once 'rest-api/objects/brasseries.php';
-
-// include_once '../config/database.php';
-// include_once '../objects/brasseries.php';
-
 include_once 'api/config/database.php';
 include_once 'api/objects/brasseries.php';
 

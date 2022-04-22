@@ -7,16 +7,6 @@ header("Access-Control-Max-Age: 3600");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
  
 // get database connection
-// include_once 'rest-api/config/database.php';
- 
-// instantiate brasseries object
-// include_once 'rest-api/objects/brasseries.php';
- 
-// include_once '../config/database.php';
- 
-// // instantiate brasseries object
-// include_once '../objects/brasseries.php';
- 
 include_once 'config/database.php';
  
 // instantiate brasseries object
@@ -28,20 +18,15 @@ $db = $database->getConnection();
 $brasseries = new Brasseries($db);
  
 // get posted data
-// $data = json_decode(file_get_contents("Php://input"));
+$data = json_decode(file_get_contents("Php://input"));
  
 // set brasserie property values
-// $brasseries->Nom_raison_sociale = $data->name;
-// $brasseries->Adresse = $data->address;
-// $brasseries->Ville = $data->ville;
-// $brasseries->Code_Postal = $data->code_postal;
-// $brasseries->Courriel = $data->courriel;
-
-$brasseries->Nom_raison_sociale = $name;
-$brasseries->Adresse = $address;
-$brasseries->Ville = $ville;
-$brasseries->Code_Postal = $code_postal;
-$brasseries->Courriel = $courriel;
+$brasseries->Nom_raison_sociale = $data->Nom_raison_sociale;
+$brasseries->Adresse = $data->Adresse;
+$brasseries->Ville = $data->Ville;
+$brasseries->Code_Postal = $data->Code_Postal;
+$brasseries->No_Permis = $data->No_Permis;
+$brasseries->Courriel = $data->Courriel;
 
  
 // add the brasserie
