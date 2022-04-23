@@ -20,9 +20,10 @@ class Account{
     // login
     function login(){
  
-      // query
-      $query = "SELECT account_id FROM " . $this->table_name . " WHERE account_name=:username AND account_passwd=:passwd";
-      
+      // select all query
+      $query = "SELECT * FROM
+                " . $this->table_name . " WHERE account_name = :name AND account_passwd = :pw";
+
       // prepare query
       $stmt = $this->conn->prepare($query);
       
@@ -31,13 +32,13 @@ class Account{
       $this->account_passwd=htmlspecialchars(strip_tags($this->account_passwd));
       
       // bind No_Permis of record to delete
-      $stmt->bindParam(":username", $this->account_name);
-      $stmt->bindParam(":passwd", $this->account_name);
+      $stmt->bindParam(":name", $this->account_name);
+      $stmt->bindParam(":pw", $this->account_passwd);
       
       // execute query
-      $stmt->execute(){
-        
+      $stmt->execute();
+    
       return $stmt;
-
+    }
     
 }

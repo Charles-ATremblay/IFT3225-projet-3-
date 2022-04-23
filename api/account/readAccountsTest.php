@@ -1,4 +1,5 @@
 <?php
+	// NOT USED IN API
 	header("Access-Control-Allow-Origin: *");
 	header("Content-Type: application/json; charset=UTF-8");
 	header("Access-Control-Allow-Methods: POST");
@@ -8,13 +9,6 @@
 	include_once 'api/config/database.php';
 	include_once 'api/objects/account.php';
 	
-	session_start();
-
-	// if (isset($_SESSION["username"]) && isset($_SESSION["loggedIn"])) {
-	// 	header("Location: index.html");
-	// 	exit();
-	// }
-
 	// get database connection
 	$database = new Database();
 	$db = $database->getConnection();
@@ -28,21 +22,38 @@
 	
 	$stmt = $account->login();
 	$num = $stmt->rowCount();
- 
+
 	// check if more than 0 record found
 	if($num>0){
-		// $_SESSION["username"] = $username;
-		// $_SESSION["loggedIn"] = 1;
-		// header('Location: ./index.html/#/table' );
-		header('Location: index.html');
-
-	} else {
-		
-		echo '{';
-			echo '"message": "Invalid username and/or password."';
-			echo '}';
+	
+		// products array
+		$accounts_arr=array();
+		$accounts_arr["data"]=array();
+	
+		// retrieve our table contents
+		// fetch() is faster than fetchAll()
+		// http://stackoverflow.com/questions/2770630/pdofetchall-vs-pdofetch-in-a-loop
+		while ($row = $stmt->fetch(PDO::FETCH_ASSOC)){
+			// extract row
+			// this will make $row['name'] to
+			// just $name only
+			extract($row);
+	
+			$account_item=array(
+				"account_id" => $account_id,
+				"account_name" => $account_name,
+				"account_passwd" => $account_passwd
+			);
+	
+			array_push($accounts_arr["data"], $account_item);
+		}
+	
+		echo json_encode($accounts_arr,JSON_PRETTY_PRINT);
 	}
-
-
-
+	
+	else{
+		echo json_encode(
+			array("message" => "No nope.")
+		);
+	}
 ?>      
