@@ -37,10 +37,6 @@ $(document).ready(function() {
         const yMax = d3.max(data, function(d) {
             return d.Latitude;
         });
-        console.log("y Min = "+ yMin);
-        console.log("y Max = "+yMax);
-        console.log("x Min = "+xMin);
-        console.log("x Max = "+xMax);
 
         // x and y scales
         const xScale = d3.scaleLinear() 
@@ -95,9 +91,11 @@ $(document).ready(function() {
         dots.enter()
             .append("circle")
             .attr("cx", function(d) {
+                xScale.domain([xMax, xMin]);
                 return xScale(d.Longitude);
             })
             .attr("cy", function(d) {
+                yScale.domain([yMin, yMax]);
                 return yScale(d.Latitude);
             })
             .attr("r", 3).attr("fill", "none")

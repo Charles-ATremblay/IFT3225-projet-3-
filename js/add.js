@@ -11,7 +11,7 @@ $(document).ready(function() {
         var longitude = $("#longitude").val();
         var latitude = $("#latitude").val();
 
-        if (name == "" || adress == "" || ville == "" || cp == "" || permis == "" || courriel == "") {
+        if (name == "" || adress == "" || ville == "" || cp == "" || permis == "" || courriel == ""|| longitude == ""||latitude == "") {
             alert("Please fill out all the form.");
             return false;
         }
@@ -31,10 +31,11 @@ $(document).ready(function() {
             },
             cache: false,
             success: function(data) {
-              console.log(data);
-
+              alert("Brewery was added!");
+              $('#nom, #adress, #ville, #cp, #permis, #courriel, #longitude, #latitude').val('');
             },
             error: function(xhr, status, error) {
+                alert("This brewery already exists in the database.");
                 console.error(xhr);
             }
         });

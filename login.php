@@ -10,10 +10,10 @@
 	
 	session_start();
 
-	// if (isset($_SESSION["username"]) && isset($_SESSION["loggedIn"])) {
-	// 	header("Location: index.html");
-	// 	exit();
-	// }
+	if (isset($_SESSION["username"]) && isset($_SESSION["loggedIn"])) {
+		header("Location: index.html");
+		exit();
+	}
 
 	// get database connection
 	$database = new Database();
@@ -31,8 +31,8 @@
  
 	// check if more than 0 record found
 	if($num>0){
-		// $_SESSION["username"] = $username;
-		// $_SESSION["loggedIn"] = 1;
+		$_SESSION["username"] = $username;
+		$_SESSION["loggedIn"] = 1;
 		// header('Location: ./index.html/#/table' );
 		header('Location: index.html');
 

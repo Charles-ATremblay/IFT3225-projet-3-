@@ -14,7 +14,12 @@ $(document).ready(function () {
                 "permis": no_permis
             },
             success: function (data) {
-                console.log(data);
+                alert("The brewery was deleted from the database");
+                $("#permis").val('');
+            },
+            error: function(xhr, status, error) {
+                alert("This brewery does not exist in the database.");
+                console.error(xhr);
             }
         });
     });

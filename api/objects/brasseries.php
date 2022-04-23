@@ -160,7 +160,7 @@ class Brasseries{
       $query = "INSERT INTO
                 " . $this->table_name . "
             SET
-                Nom_raison_sociale=:name, Adresse=:address, Ville=:ville, Code_Postal=:code_postal, No_Permis=:permis, Courriel=:courriel";
+                Nom_raison_sociale=:name, Adresse=:address, Ville=:ville, Code_Postal=:code_postal, No_Permis=:permis, Courriel=:courriel, Longitude=:longitude, Latitude=:latitude";
       
       // prepare query
       $stmt = $this->conn->prepare($query);
@@ -172,6 +172,8 @@ class Brasseries{
       $this->Code_Postal=htmlspecialchars(strip_tags($this->Code_Postal));
       $this->No_Permis=htmlspecialchars(strip_tags($this->No_Permis));
       $this->Courriel=htmlspecialchars(strip_tags($this->Courriel));
+      $this->Longitude=htmlspecialchars(strip_tags($this->Longitude));
+      $this->Latitude=htmlspecialchars(strip_tags($this->Latitude));
       
       // bind values
       $stmt->bindParam(":name", $this->Nom_raison_sociale);
@@ -180,7 +182,9 @@ class Brasseries{
       $stmt->bindParam(":code_postal", $this->Code_Postal);
       $stmt->bindParam(":permis", $this->No_Permis);
       $stmt->bindParam(":courriel", $this->Courriel);
-      
+      $stmt->bindParam(":longitude", $this->Longitude);
+      $stmt->bindParam(":latitude", $this->Latitude);
+
       // execute query
       if($stmt->execute()){
         return true;
