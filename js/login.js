@@ -3,11 +3,9 @@ $(document).ready(function () {
         var username = $("#username").val();
         var password = $("#password").val();
 
-        // alert('There was some error performing the AJAX call!');
-
-        if (username == "" || password == "") {
-            alert("Please enter something.");
-        }
+        // if (username == "" || password == "") {
+        //     alert("Please enter something.");
+        // }
 
         $.ajax({
             type: 'POST',
@@ -18,10 +16,10 @@ $(document).ready(function () {
                 "password": password
             },
             success: function (data) {
-                alert("You are logged in as " +username);
+                alert(data["message"]);
             },
             error: function(xhr, status, error) {
-                alert("You cant login");
+                alert("Error");
                 console.error(xhr);
             }
         });

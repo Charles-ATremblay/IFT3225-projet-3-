@@ -11,7 +11,7 @@
 	session_start();
 
 	if (isset($_SESSION["username"]) && isset($_SESSION["loggedIn"])) {
-		header("Location: index.html");
+		header("Location: index.php");
 		exit();
 	}
 
@@ -32,10 +32,12 @@
 	// check if more than 0 record found
 	if($num>0){
 		$_SESSION["username"] = $_POST['username'];
-		echo $_SESSION["username"];
-		$_SESSION["loggedIn"] = 1;
-		// header('Location: ./index.html/#/table' );
-		header('Location: index.html');
+
+		echo '{';
+			echo '"message": "Welcome ' . $_SESSION["username"] . '"';
+			echo '}';
+			
+		header('Location: index.php');
 
 	} else {
 		
@@ -43,4 +45,6 @@
 			echo '"message": "Invalid username and/or password."';
 			echo '}';
 	}
+
+	
 ?>      

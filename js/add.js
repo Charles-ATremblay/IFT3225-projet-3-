@@ -31,11 +31,10 @@ $(document).ready(function() {
             },
             cache: false,
             success: function(data) {
-              alert("Brewery was added!");
               $('#nom, #adress, #ville, #cp, #permis, #courriel, #longitude, #latitude').val('');
             },
             error: function(xhr, status, error) {
-                alert("This brewery already exists in the database.");
+                alert("Error");
                 console.error(xhr);
             }
         });
