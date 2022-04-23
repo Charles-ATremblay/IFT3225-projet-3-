@@ -23,17 +23,10 @@ $db = $database->getConnection();
 // prepare brasserie object
 $brasseries = new Brasseries($db);
  
-// get brasserie No_Permis
-$data = json_decode(file_get_contents("php://input"));
- 
 // set brasserie No_Permis to be deleted
 $brasseries->No_Permis = $_POST['permis'];
-$permis = $_POST['permis'];
- 
 
-$sql_query = "DELETE FROM brasseries WHERE No_Permis='".$permis."'";
-
-if($db->query($sql_query)){
+if($brasseries->delete()){
     echo '{';
         echo '"message": "brasseries was deleted."';
      echo '}';
