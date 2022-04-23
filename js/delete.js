@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#submit").click(function () {
+    $("#submitDelete").click(function () {
         var no_permis = $("#permis").val();
 
         if (no_permis == "") {
@@ -13,8 +13,8 @@ $(document).ready(function () {
             data: {
                 "permis": no_permis
             },
-            success: function (data) {
-                alert(data["message"]);
+            success: function (dataDelete) {
+                alert(dataDelete["message"]);
                 $("#permis").val('');
             },
             error: function(xhr, status, error) {

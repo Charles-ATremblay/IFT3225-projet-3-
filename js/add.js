@@ -1,7 +1,7 @@
 $("svg").empty();
 $(document).ready(function() {
 
-    $("#submit").click(function() {
+    $("#submitAdd").click(function() {
         var name = $("#nom").val();
         var adress = $("#adress").val();
         var ville = $("#ville").val();
@@ -30,8 +30,8 @@ $(document).ready(function() {
                 "latitude": latitude
             },
             cache: false,
-            success: function(data) {
-                alert(data["message"]);
+            success: function(dataAdd) {
+                alert(dataAdd["message"]);
               $('#nom, #adress, #ville, #cp, #permis, #courriel, #longitude, #latitude').val('');
             },
             error: function(xhr, status, error) {

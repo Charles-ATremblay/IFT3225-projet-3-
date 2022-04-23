@@ -1,11 +1,12 @@
 $(document).ready(function () {
-    $('#submit').click(function () {
+    $('#submitLogin').click(function () {
         var username = $("#username").val();
         var password = $("#password").val();
 
-        // if (username == "" || password == "") {
-        //     alert("Please enter something.");
-        // }
+        if (username == "" || password == "") {
+            alert("Please enter something.");
+            return false;
+        }
 
         $.ajax({
             type: 'POST',
@@ -15,8 +16,8 @@ $(document).ready(function () {
                 "username": username,
                 "password": password
             },
-            success: function (data) {
-                alert(data["message"]);
+            success: function (dataLogin) {
+                alert(dataLogin["message"]);
             },
             error: function(xhr, status, error) {
                 alert("Error");
