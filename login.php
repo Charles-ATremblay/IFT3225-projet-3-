@@ -31,7 +31,8 @@
  
 	// check if more than 0 record found
 	if($num>0){
-		$_SESSION["username"] = $username;
+		$_SESSION["username"] = $_POST['username'];
+		echo $_SESSION["username"];
 		$_SESSION["loggedIn"] = 1;
 		// header('Location: ./index.html/#/table' );
 		header('Location: index.html');
@@ -42,7 +43,4 @@
 			echo '"message": "Invalid username and/or password."';
 			echo '}';
 	}
-
-
-
 ?>      

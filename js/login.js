@@ -16,13 +16,14 @@ $(document).ready(function () {
             data: {
                 "username": username,
                 "password": password
-
             },
             success: function (data) {
-                console.log(data);
+                alert("You are logged in as " +username);
+            },
+            error: function(xhr, status, error) {
+                alert("You cant login");
+                console.error(xhr);
             }
-
         });
-
     });
 });
