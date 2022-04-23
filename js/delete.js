@@ -14,6 +14,7 @@ $(document).ready(function () {
                 "permis": no_permis
             },
             success: function (data) {
+                alert(data["message"]);
                 $("#permis").val('');
             },
             error: function(xhr, status, error) {

@@ -31,6 +31,7 @@ $(document).ready(function() {
             },
             cache: false,
             success: function(data) {
+                alert(data["message"]);
               $('#nom, #adress, #ville, #cp, #permis, #courriel, #longitude, #latitude').val('');
             },
             error: function(xhr, status, error) {
